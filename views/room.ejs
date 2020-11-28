@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <title>HYS English</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main__left">
+            <div class="main__videos">
+                <div id="videoGrid">
+
+                </div>
+            </div>
+            <div class="main__controls">
+                <div class="main__controlsBlock">
+                    <div onclick="muteUnmute()" class="main__controlsBtn main__mute_button">
+                        <i class="fas fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+                    <div onclick="playStop()" class="main__controlsBtn  main__video_button">
+                        <i class="fas fa-video"></i>
+                        <span>Stop Video</span>
+                    </div>
+                </div>
+                <div class="main__controlsBlock">
+                    <div class="main__controlsBtn ">
+                       <span class="leave_meeting">Leave Meeting</span>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="main__right">
+            <div class="main__header">
+                <h5>Chat</h5>
+            </div>
+            <div class="main__chat_window">
+                <ul class="messages">
+                   
+                </ul>
+            </div>
+            <div class="main__message_container">
+                <input id="chat_message" type="text" placeholder="Type message here...">
+            </div>   
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/peerjs.min.js"></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script src="/js/room.js"></script>
+</body>
+</html>
